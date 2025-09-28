@@ -1,0 +1,169 @@
+{
+  "plants": [
+    {
+      "id": "1",
+      "name": "Monstera Deliciosa",
+      "scientificName": "Monstera deliciosa",
+      "family": "Araceae",
+      "origin": "Central America",
+      "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400",
+      "keywords": ["monstera", "swiss cheese plant", "split leaf", "tropical"],
+      "care": {
+        "light": "Bright, indirect light",
+        "water": "Water when top inch of soil is dry",
+        "humidity": "60-70%",
+        "temperature": "65-80°F (18-27°C)"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Snake Plant",
+      "scientificName": "Sansevieria trifasciata",
+      "family": "Asparagaceae",
+      "origin": "West Africa",
+      "image": "https://images.unsplash.com/photo-1593691509543-c55fb32d8de5?w=400",
+      "keywords": ["snake plant", "mother-in-law's tongue", "sansevieria", "succulent"],
+      "care": {
+        "light": "Low to bright, indirect light",
+        "water": "Water every 2-3 weeks",
+        "humidity": "30-50%",
+        "temperature": "60-80°F (15-27°C)"
+      }
+    },
+    {
+      "id": "3",
+      "name": "Fiddle Leaf Fig",
+      "scientificName": "Ficus lyrata",
+      "family": "Moraceae",
+      "origin": "Western Africa",
+      "image": "https://images.unsplash.com/photo-1586093248292-4e6636ce8b97?w=400",
+      "keywords": ["fiddle leaf fig", "ficus", "large leaves", "tree"],
+      "care": {
+        "light": "Bright, indirect light",
+        "water": "Water weekly",
+        "humidity": "50-60%",
+        "temperature": "65-75°F (18-24°C)"
+      }
+    },
+    {
+      "id": "4",
+      "name": "Peace Lily",
+      "scientificName": "Spathiphyllum wallisii",
+      "family": "Araceae",
+      "origin": "Tropical Americas",
+      "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400",
+      "keywords": ["peace lily", "white flowers", "spathiphyllum", "flowering"],
+      "care": {
+        "light": "Low to medium, indirect light",
+        "water": "Keep soil consistently moist",
+        "humidity": "40-60%",
+        "temperature": "65-80°F (18-27°C)"
+      }
+    },
+    {
+      "id": "5",
+      "name": "Rubber Plant",
+      "scientificName": "Ficus elastica",
+      "family": "Moraceae",
+      "origin": "India",
+      "image": "https://images.unsplash.com/photo-1463320726281-696a485928c7?w=400",
+      "keywords": ["rubber plant", "ficus elastica", "glossy leaves", "tree"],
+      "care": {
+        "light": "Bright, indirect light",
+        "water": "Water when top inch is dry",
+        "humidity": "40-50%",
+        "temperature": "60-75°F (15-24°C)"
+      }
+    },
+    {
+      "id": "6",
+      "name": "Pothos",
+      "scientificName": "Epipremnum aureum",
+      "family": "Araceae",
+      "origin": "French Polynesia",
+      "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=400",
+      "keywords": ["pothos", "devil's ivy", "vine", "trailing"],
+      "care": {
+        "light": "Low to bright, indirect light",
+        "water": "Water when soil is dry",
+        "humidity": "50-70%",
+        "temperature": "65-85°F (18-29°C)"
+      }
+    },
+    {
+      "id": "7",
+      "name": "Aloe Vera",
+      "scientificName": "Aloe barbadensis",
+      "family": "Asphodelaceae",
+      "origin": "Arabian Peninsula",
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400",
+      "keywords": ["aloe vera", "succulent", "medicinal", "thick leaves"],
+      "care": {
+        "light": "Bright, direct light",
+        "water": "Water deeply but infrequently",
+        "humidity": "10-30%",
+        "temperature": "55-80°F (13-27°C)"
+      }
+    },
+    {
+      "id": "8",
+      "name": "Spider Plant",
+      "scientificName": "Chlorophytum comosum",
+      "family": "Asparagaceae",
+      "origin": "South Africa",
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400",
+      "keywords": ["spider plant", "airplane plant", "variegated", "babies"],
+      "care": {
+        "light": "Bright, indirect light",
+        "water": "Water regularly, keep moist",
+        "humidity": "40-65%",
+        "temperature": "65-75°F (18-24°C)"
+      }
+    }
+  ],
+  "careTips": [
+    {
+      "id": "1",
+      "title": "Watering Your Indoor Plants",
+      "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400",
+      "content": "Most houseplants prefer to dry out slightly between waterings. Check the soil moisture by inserting your finger about an inch deep.",
+      "category": "Watering"
+    },
+    {
+      "id": "2",
+      "title": "Understanding Light Requirements",
+      "image": "https://images.unsplash.com/photo-1463320726281-696a485928c7?w=400",
+      "content": "Different plants have varying light needs. Bright indirect light means near a window but not in direct sunbeams.",
+      "category": "Lighting"
+    },
+    {
+      "id": "3",
+      "title": "Humidity for Tropical Plants",
+      "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=400",
+      "content": "Many houseplants are tropical and prefer higher humidity. Use a humidifier or pebble tray to increase moisture.",
+      "category": "Humidity"
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": "1",
+      "title": "Top 10 Low-Light Plants for Your Home",
+      "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400",
+      "excerpt": "Discover beautiful plants that thrive in darker corners of your home.",
+      "content": "Not every corner of your home gets bright sunlight, but that doesn't mean you can't have beautiful plants...",
+      "author": "Plant Expert",
+      "date": "2024-01-15",
+      "category": "Indoor Plants"
+    },
+    {
+      "id": "2",
+      "title": "The Art of Plant Propagation",
+      "image": "https://images.unsplash.com/photo-1463320726281-696a485928c7?w=400",
+      "excerpt": "Learn how to multiply your plant collection through propagation.",
+      "content": "Plant propagation is one of the most rewarding aspects of plant care...",
+      "author": "Green Thumb",
+      "date": "2024-01-10",
+      "category": "Care Tips"
+    }
+  ]
+}
