@@ -18,7 +18,6 @@ class _CameraScreenState extends State<CameraScreen>
     with WidgetsBindingObserver {
   CameraController? _cameraController;
   List<CameraDescription>? _cameras;
-
   bool _isFlashOn = false;
   int _selectedCameraIndex = 0;
   final ImagePicker _imagePicker = ImagePicker();
@@ -123,18 +122,7 @@ class _CameraScreenState extends State<CameraScreen>
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    width: 48,
-                    height: 48,
-                    decoration: BoxDecoration(
-                      color: Colors.black.withOpacity(0.5),
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    child: IconButton(
-                      onPressed: () => Get.back(),
-                      icon: const Icon(Icons.arrow_back, color: Colors.white),
-                    ),
-                  ),
+                  SizedBox(width: 48, height: 48),
                   Container(
                     width: 48,
                     height: 48,
@@ -314,6 +302,10 @@ class _CameraScreenState extends State<CameraScreen>
         _cameraController!.value.isInitialized &&
         mounted) {
       try {
+        if (_cameras![_selectedCameraIndex].lensDirection ==
+            CameraLensDirection.front) {
+          return;
+        }
         await _cameraController!.setFlashMode(
           _isFlashOn ? FlashMode.off : FlashMode.torch,
         );
@@ -341,7 +333,9 @@ class _CameraScreenState extends State<CameraScreen>
     try {
       await _cameraController!.initialize();
       if (mounted) {
-        setState(() {});
+        setState(() {
+          _isFlashOn = false;
+        });
       }
     } catch (e) {
       debugPrint('Camera switch error: $e');
@@ -351,12 +345,14 @@ class _CameraScreenState extends State<CameraScreen>
   void _capturePhoto(PlantController controller) async {
     if (_cameraController != null && _cameraController!.value.isInitialized) {
       try {
-        // Turn off flash before capture if it's on
+        final XFile photo = await _cameraController!.takePicture();
         if (_isFlashOn) {
           await _cameraController!.setFlashMode(FlashMode.off);
+          setState(() {
+            _isFlashOn = false;
+          });
         }
 
-        final XFile photo = await _cameraController!.takePicture();
         final notificationController = Get.find<NotificationController>();
         notificationController.addNotification(
           'Photo Captured',
@@ -389,7 +385,10 @@ class _CameraScreenState extends State<CameraScreen>
         imageQuality: 85,
       );
 
-      if (image != null) {
+      if (image == null) {
+        if (mounted) _initializeCamera();
+        return;
+      } else {
         final notificationController = Get.find<NotificationController>();
         notificationController.addNotification(
           'Image Selected',
