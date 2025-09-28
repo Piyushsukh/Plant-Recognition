@@ -31,9 +31,9 @@ class CareTipsScreen extends StatelessWidget {
             const SizedBox(height: 8),
             Text(
               "Expert advice for healthy plants",
-              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                color: AppTheme.lightText,
-              ),
+              style: Theme.of(
+                context,
+              ).textTheme.bodyLarge?.copyWith(color: AppTheme.lightText),
             ),
             const SizedBox(height: 32),
             ListView.builder(
@@ -46,14 +46,7 @@ class CareTipsScreen extends StatelessWidget {
                   margin: const EdgeInsets.only(bottom: 16),
                   child: PremiumCard(
                     padding: EdgeInsets.zero,
-                    onTap: () {
-                      Get.snackbar(
-                        'Care Tip',
-                        tip['title'],
-                        backgroundColor: AppTheme.primaryGreen,
-                        colorText: Colors.white,
-                      );
-                    },
+                    onTap: null,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -66,14 +59,15 @@ class CareTipsScreen extends StatelessWidget {
                             child: Image.network(
                               tip['image'],
                               fit: BoxFit.cover,
-                              errorBuilder: (context, error, stackTrace) => Container(
-                                color: AppTheme.beige,
-                                child: const Icon(
-                                  Icons.lightbulb,
-                                  size: 48,
-                                  color: AppTheme.primaryGreen,
-                                ),
-                              ),
+                              errorBuilder: (context, error, stackTrace) =>
+                                  Container(
+                                    color: AppTheme.beige,
+                                    child: const Icon(
+                                      Icons.lightbulb,
+                                      size: 48,
+                                      color: AppTheme.primaryGreen,
+                                    ),
+                                  ),
                             ),
                           ),
                         ),
@@ -93,24 +87,28 @@ class CareTipsScreen extends StatelessWidget {
                                 ),
                                 child: Text(
                                   tip['category'],
-                                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                    color: AppTheme.primaryGreen,
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                                  style: Theme.of(context).textTheme.bodyMedium
+                                      ?.copyWith(
+                                        color: AppTheme.primaryGreen,
+                                        fontWeight: FontWeight.w500,
+                                      ),
                                 ),
                               ),
                               const SizedBox(height: 12),
                               Text(
                                 tip['title'],
-                                style: Theme.of(context).textTheme.headlineMedium,
+                                style: Theme.of(
+                                  context,
+                                ).textTheme.headlineMedium,
                               ),
                               const SizedBox(height: 8),
                               Text(
                                 tip['content'],
-                                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                                  color: AppTheme.lightText,
-                                  height: 1.5,
-                                ),
+                                style: Theme.of(context).textTheme.bodyLarge
+                                    ?.copyWith(
+                                      color: AppTheme.lightText,
+                                      height: 1.5,
+                                    ),
                               ),
                             ],
                           ),
