@@ -1,5 +1,4 @@
 import 'package:google_mlkit_image_labeling/google_mlkit_image_labeling.dart';
-import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
 import 'plant_data_service.dart';
 
 class MLKitService {
